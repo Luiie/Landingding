@@ -43,53 +43,55 @@
                         <div class="row">
 							<div class="row-6 row-12-mobilep">
 								<h3>From Introduce to AI & DL</h3>
-								<p>pip install SpeechRecognition #설치
-									import speech_recognition as sr
-									
-									sr.__version__ #버전 확인!
-									r = sr.Recognizer()
-									harvard = sr.AudioFile('harvard.wav')
-									with harvard as source:
-										audio = r.record(source)
-									with harvard as source:
-										audio = r.record(source)
-									type(audio)
-									r.recognize_google(audio)
-									with harvard as source:
-										audio = r.record(source, offset = 2, duration = 4) # 2초부터 4초간 내용
+								<pre>
+									<p>Python module설치해서 마이크로 언어 인식!</p>
+									<p>pip install SpeechRecognition #설치<br>
+										import speech_recognition as sr<br><br>
 										
-									r.recognize_google(audio)
-									jackhammer = sr.AudioFile('jackhammer.wav')
-									with jackhammer as source:
-										audio = r.record(source)
-									r.recognize_google(audio) #노이즈가 심한 파일 때문에 제대로 입력되지 않는다
-									with jackhammer as source:
-										r.adjust_for_ambient_noise(source, duration = 0.5) #이 코드를 입력해 노이즈 제거
-										audio = r.record(source)
-									r.recognize_google(audio)
-									print("*")
-									pip install pyaudio
-									#Anaconda power prompt에 
-									#pip install pipwin 
-									#pipwin install pyaudio
-									#명령어 입력하고 설치하면 잘 설치된다.
-									import speech_recognition as sr
-									r = sr.Recognizer()
-									import pyaudio
-									
-									p = pyaudio.PyAudio()
-									for i in range(p.get_device_count()):
-									  dev = p.get_device_info_by_index(i)
-									  print((i,dev['name'],dev['maxInputChannels']))
+										sr.__version__ #버전 확인!<br>
+										r = sr.Recognizer()<br>
+										harvard = sr.AudioFile('harvard.wav')<br>
+										with harvard as source:<br>
+											audio = r.record(source)<br>
+										with harvard as source:<br>
+											audio = r.record(source)<br>
+										type(audio)<br>
+										r.recognize_google(audio)<br>
+										with harvard as source:<br>
+											audio = r.record(source, offset = 2, duration = 4) # 2초부터 4초간 내용<br><br>
+											
+										r.recognize_google(audio)<br>
+										jackhammer = sr.AudioFile('jackhammer.wav')<br>
+										with jackhammer as source:<br>
+											audio = r.record(source)<br>
+										r.recognize_google(audio) #노이즈가 심한 파일 때문에 제대로 입력되지 않는다<br>
+										with jackhammer as source:<br>
+											r.adjust_for_ambient_noise(source, duration = 0.5) #이 코드를 입력해 노이즈 제거<br>
+											audio = r.record(source)<br>
+										r.recognize_google(audio)<br>
+										print("*")<br>
+										pip install pyaudio<br>
+										#Anaconda power prompt에 <br>
+										#pip install pipwin <br>
+										#pipwin install pyaudio<br>
+										#명령어 입력하고 설치하면 잘 설치된다.<br>
+										import speech_recognition as sr<br>
+										r = sr.Recognizer()<br>
+										import pyaudio<br><br>
 										
-									#위 코드를 실행해서 사용할 수 있는 마이크 channel을 찾는다
-									mic = sr.Microphone(device_index=2)
-									#연결한 외부마이크 채널을 device_index에 입력한다!
-									with mic as source:
-											audio = r.listen(source)
-									r.recognize_google(audio) #이제 할 말 하면 된다
-									
-									</p>
+										p = pyaudio.PyAudio()<br>
+										for i in range(p.get_device_count()):<br>
+										dev = p.get_device_info_by_index(i)<br>
+										print((i,dev['name'],dev['maxInputChannels']))<br><br>
+											
+										#위 코드를 실행해서 사용할 수 있는 마이크 channel을 찾는다<br>
+										mic = sr.Microphone(device_index=2)<br>
+										#연결한 외부마이크 채널을 device_index에 입력한다!<br>
+										with mic as source:<br>
+												audio = r.listen(source)<br>
+										r.recognize_google(audio) #이제 할 말 하면 된다<br>
+										</p>
+									</pre>
 							</div>
 							<div class="row-6 row-12-mobilep">
 								<h3>From book</h3>
